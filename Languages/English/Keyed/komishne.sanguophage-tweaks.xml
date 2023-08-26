@@ -2,4 +2,8 @@
 
 <LanguageData>
   <KOM.SanguophageTweaks.MessageCannotUseIncapableOfViolenceWouldKill>Cannot use {ABILITY_label} on anyone it would kill or seriously injure, as {PAWN_labelShort} is incapable of violence.</KOM.SanguophageTweaks.MessageCannotUseIncapableOfViolenceWouldKill>
+
+  <KOM.SanguophageTweaks.Settings.Category>[KOM] Sanguophage Tweaks</KOM.SanguophageTweaks.Settings.Category>
+  <KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Label>Skip having the victim's body size influence on the blood and hemogen the biter gains:</KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Label>
+  <KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Tooltip>Not much of a difference without VRES or additional body size genes. Default: true.</KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Tooltip>
 </LanguageData>
