@@ -57,6 +57,13 @@ namespace Komishne.SanguophageTweaks
     [HarmonyPatch(typeof(SanguophageUtility), nameof(SanguophageUtility.DoBite))]
     public static class SanguophageUtility_DoBite_Patch
     {
+        static bool Prepare(/*MethodBase original*/)
+        {
+            // There is only one method being patched in this class, and only one feature being patched, so we do not
+            // need to check the MethodBase parameter.
+            return SanguophageTweaksSettings.EnableSkipVictimBodySizeEffectOnBiterGains;
+        }
+
         // We want to remove multiplying by the target's body size when computing the amount of hemogen a pawn will
         // gain. From VRES, the amount of blood lost and gained is also modified in the target, which implies a
         // Sanguophage always drains a constant amount of blood, and so its changes should not depend on the size of
