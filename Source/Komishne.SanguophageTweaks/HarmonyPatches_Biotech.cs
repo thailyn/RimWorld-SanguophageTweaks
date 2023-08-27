@@ -2,6 +2,7 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using Verse;
 
@@ -90,7 +91,7 @@ namespace Komishne.SanguophageTweaks
         // we simply not emit the new Nop instructions?
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            System.Reflection.MethodInfo bodySizeMethodInfo = typeof(Pawn).GetMethod("get_BodySize");
+            MethodInfo bodySizeMethodInfo = typeof(Pawn).GetMethod("get_BodySize");
             if (bodySizeMethodInfo is null)
             {
                 if (SanguophageTweaksSettings.EnableDebugMode)
@@ -107,7 +108,7 @@ namespace Komishne.SanguophageTweaks
             int seekedInstructionLength = 7;
             var found = false;
             List<CodeInstruction> codes = instructions.ToList();
-            for (var i = 0; i < codes.Count/* - seekedInstructionLength*/; i++)
+            for (var i = 0; i < codes.Count; i++)
             {
                 if (i < (codes.Count - seekedInstructionLength) &&
                     codes[i].opcode == OpCodes.Ldarg_2 &&
