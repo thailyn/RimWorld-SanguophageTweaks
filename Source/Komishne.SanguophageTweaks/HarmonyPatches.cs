@@ -17,7 +17,10 @@ namespace Komishne.SanguophageTweaks
             harmonyInstance.PatchAll();
             stopwatch.Stop();
 
-            Log.Message($"[KOM.SanguophageTweaks] Time for all patches: {stopwatch.Elapsed.TotalMilliseconds}ms.");
+            if (SanguophageTweaksSettings.EnableDebugMode)
+            {
+                Log.Message($"[KOM.SanguophageTweaks] Time for all patches: {stopwatch.Elapsed.TotalMilliseconds}ms.");
+            }
         }
     }
 }

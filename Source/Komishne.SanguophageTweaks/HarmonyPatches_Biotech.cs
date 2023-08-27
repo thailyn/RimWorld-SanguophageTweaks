@@ -42,9 +42,12 @@ namespace Komishne.SanguophageTweaks
                 return true;
 
             float multiplier = Utility.BloodlossSeverityMultiplierFromBodySize(pawn);
-            Log.Message(
-                $"[KOM.SanguophageTweaks] Modifying hemogen offset to {pawn.Named("PAWN")}. Original: {offset}. " + 
-                $"Computed multiplier: {multiplier}. New value: {offset * multiplier}");
+            if (SanguophageTweaksSettings.EnableDebugMode)
+            {
+                Log.Message(
+                    $"[KOM.SanguophageTweaks] Modifying hemogen offset to {pawn.Named("PAWN")}. Original: {offset}. " +
+                    $"Computed multiplier: {multiplier}. New value: {offset * multiplier}");
+            }
             offset *= multiplier;
 
             return true;
@@ -83,9 +86,12 @@ namespace Komishne.SanguophageTweaks
             System.Reflection.MethodInfo bodySizeMethodInfo = typeof(Pawn).GetMethod("get_BodySize");
             if (bodySizeMethodInfo is null)
             {
-                Log.Error(
-                    "[KOM.SanguophageTweaks] MethodInfo for Pawn.BodySize (Verse.Pawn::get_BodySize()) is null. " +
-                    "Aborting transpiler for SanguophageUtility.DoBite.");
+                if (SanguophageTweaksSettings.EnableDebugMode)
+                {
+                    Log.Error(
+                        "[KOM.SanguophageTweaks] MethodInfo for Pawn.BodySize (Verse.Pawn::get_BodySize()) is null. " +
+                        "Aborting transpiler for SanguophageUtility.DoBite.");
+                }
                 foreach (CodeInstruction instruction in instructions)
                     yield return instruction;
                 yield break;

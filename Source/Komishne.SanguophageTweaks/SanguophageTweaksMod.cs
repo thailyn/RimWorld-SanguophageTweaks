@@ -10,15 +10,24 @@ namespace Komishne.SanguophageTweaks
 {
     public class SanguophageTweaksSettings : ModSettings
     {
-        protected static bool enableSkipVictimBodySizeEffectOnBiterGainsDefault = true;
-        public static bool enableSkipVictimBodySizeEffectOnBiterGains = enableSkipVictimBodySizeEffectOnBiterGainsDefault;
+        protected static bool EnableSkipVictimBodySizeEffectOnBiterGainsDefault = true;
+        public static bool EnableSkipVictimBodySizeEffectOnBiterGains =
+            EnableSkipVictimBodySizeEffectOnBiterGainsDefault;
+
+        protected static bool EnableDebugModeDefault = false;
+        public static bool EnableDebugMode = EnableDebugModeDefault;
 
         public override void ExposeData()
         {
             Scribe_Values.Look(
-                ref enableSkipVictimBodySizeEffectOnBiterGains,
+                ref EnableSkipVictimBodySizeEffectOnBiterGains,
                 /*label=*/"enableSkipVictimBodySizeEffectOnBiterGains",
-                /*defaultValue=*/enableSkipVictimBodySizeEffectOnBiterGainsDefault,
+                /*defaultValue=*/EnableSkipVictimBodySizeEffectOnBiterGainsDefault,
+                /*forceSave=*/true);
+            Scribe_Values.Look(
+                ref EnableDebugMode,
+                /*label=*/"enableDebugMode",
+                /*defaultValue=*/EnableDebugModeDefault,
                 /*forceSave=*/true);
             base.ExposeData();
         }
@@ -40,12 +49,17 @@ namespace Komishne.SanguophageTweaks
             
             listingStandard.CheckboxLabeled(
                 "KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Label".Translate(),
-                ref SanguophageTweaksSettings.enableSkipVictimBodySizeEffectOnBiterGains,
+                ref SanguophageTweaksSettings.EnableSkipVictimBodySizeEffectOnBiterGains,
                 "KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Tooltip".Translate());
-            
+
+            listingStandard.CheckboxLabeled(
+                "KOM.SanguophageTweaks.Settings.EnableDebugMode.Label".Translate(),
+                ref SanguophageTweaksSettings.EnableDebugMode,
+                "KOM.SanguophageTweaks.Settings.EnableDebugMode.Tooltip".Translate());
+
             //listingStandard.Label("exampleFloatExplanation");
             //Settings.exampleFloat = listingStandard.Slider(Settings.exampleFloat, 100f, 300f);
-            
+
             listingStandard.End();
 
             base.DoSettingsWindowContents(inRect);
