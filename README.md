@@ -14,7 +14,7 @@ Sanguophage](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383)
 
 There were two main concerns I had that led to the creation of this mod.
 First, with VRES, there are now four different types of bloodfeeders, and they
-almost all work differently. I didn't see a reason they couldn't be made mroe
+almost all work differently. I didn't see a reason they couldn't be made more
 similar. Second, I enjoy playing with lots of different modded genes and
 xenotypes (as well as HAR races), and from that there are way to get very
 large and very small colonists. I wanted to incorportate pawn body size (both
@@ -71,7 +71,7 @@ The mod features are categorized by the mod they primarily modify or affect.
       that calculation or actually require medicine (requiring it would make
       the easier availability of animal hemogen more balanced).
 
-### Notes and Future Ideas
+## Notes and Future Ideas
 
 This is my first published mod, and the first mod that includes non-trivial
 Harmony patches. (Including transpilers!) I plan on taking things slowly to
@@ -84,7 +84,37 @@ As for future ideas... well, while inspecting all the kinds of bloodfeeders we
 have now (with VRES), we've got a bunch, yeah, but there are some obvious
 gaps. Insect feeders?  Mechanoid feeders?
 
-Also, I know I want to add mod options.
+### Not enough hemogen packs for blood transfusions
+
+One interesting tidbit: the operation to perform a blood transfusion only
+"requires" one hemogen pack, but the doctor will try to get as many as are
+necessary to completely remove the blood loss hediff (so part of one hemogen
+pack will be "wasted"). This means sometimes you will get the game telling you
+that "missing hemogen pack x1", but you've panned over to your stockpile and
+you can point to it, it's right there! This is because some of the hemogen
+packs are on the map, but not available (e.g., reserved by someone else).
+
+Obviously, this is not a pleasant experience, and is not conveyed. For now, I
+have the same behavior with the animal blood transfusion, *except* it does not
+include forbidden hemogen packs (animal) to see how many are available. You
+will still have the same issues with reserved packs, etc.
+
+Ultimately, I want to make these operations clearer, and perhaps have versions
+that use *at most* one pack.
+
+I imagine this same confusion situation also happens for a bunch of other
+operations/bills/etc.
+
+## Known Issues
+
+None so far.
+
+## Adding and Removing the Mod
+
+You can add this mod to an existing playthrough without any issues. I expect
+you could get some one-time errors if you remove the mod, and I would
+recommend not having any of this mod's operations queued up or in progress
+when you do so.
 
 ## Links
 
