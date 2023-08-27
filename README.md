@@ -16,10 +16,14 @@ There were two main concerns I had that led to the creation of this mod.
 First, with VRES, there are now four different types of bloodfeeders, and they
 almost all work differently. I didn't see a reason they couldn't be made more
 similar. Second, I enjoy playing with lots of different modded genes and
-xenotypes (as well as HAR races), and from that there are way to get very
+xenotypes (as well as HAR races), and from that there are ways to get very
 large and very small colonists. I wanted to incorportate pawn body size (both
 the biter and the victim) in as many situations as I could, and in a
 consistent way.
+
+For a more comprehensive dissection of the thought process that led me to
+these changes, see the ANALYSIS.md file included with the downloaded files and
+is in the GitHub repo.
 
 ## Features
 
@@ -34,11 +38,12 @@ The mod features are categorized by the mod they primarily modify or affect.
     - Body size 0.8: 1.25x   (25% more)
     - Body size 6.5: ~0.15x  (15% as much)
 - The amount of hemogen a Sanguophage gains from feeding on a pawn is no
-  longer modified by the body size of the victim. VRES made it so the amount
-  of blood a victim looses when being fed on is modified by its body size,
-  which implies the volume of blood extracted by the Sanguophage is constant.
-  I like this interpretation better than vanilla's, which implies a
-  Sanguophage always drinks a specific percentage of a pawn's blood.
+  longer modified by the body size of the victim. VRES, with its animal
+  feeding, introduced the idea of the victim losing an amount of blood being
+  modified by its body size, which implies the volume of blood extracted by
+  the Sanguophage is constant. I like this interpretation better than
+  vanilla's, which implies a Sanguophage always drinks a specific percentage
+  of a pawn's blood.
   - Note that this change makes it harder for Sanguophages to fill up on
     hemogen, but in vanilla Sanguophages can not feed on animals nor are there
     many pawns with a larger body size (or a much larger body size), so its
@@ -84,6 +89,8 @@ As for future ideas... well, while inspecting all the kinds of bloodfeeders we
 have now (with VRES), we've got a bunch, yeah, but there are some obvious
 gaps. Insect feeders?  Mechanoid feeders?
 
+The analysis file also includes more details on features not implemented yet.
+
 ### Not enough hemogen packs for blood transfusions
 
 One interesting tidbit: the operation to perform a blood transfusion only
@@ -111,10 +118,11 @@ None so far.
 
 ## Adding and Removing the Mod
 
-You can add this mod to an existing playthrough without any issues. I expect
-you could get some one-time errors if you remove the mod, and I would
+Adding this mod to an existing save is fine.
+
+For removing it, I expect you could get some one-time errors, and I would
 recommend not having any of this mod's operations queued up or in progress
-when you do so.
+when you do so. Otherwise, it should be fine.
 
 ## Links
 
@@ -128,7 +136,7 @@ when you do so.
 
 Please follow the typical RimWorld modding conventions for error reporting.
 
-* Recreate the issue with the minimal number of mods necessary.
+* Determine the minimal set of mods that are necessary to recreate the issue.
 * Provide the log file with the error, preferably using
   [HugsLib's](https://steamcommunity.com/workshop/filedetails/?id=818773962)
   Ctrl+F12 feature.
