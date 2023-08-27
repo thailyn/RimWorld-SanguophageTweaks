@@ -118,6 +118,7 @@ when you do so.
 
 ## Links
 
+* Steam [workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3026361086)
 * GitHub repo
   * [main page](https://github.com/thailyn/RimWorld-SanguophageTweaks)
   * [download latest
