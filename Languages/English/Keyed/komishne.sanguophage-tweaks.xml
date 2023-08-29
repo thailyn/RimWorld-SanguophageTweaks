@@ -3,9 +3,15 @@
 <LanguageData>
   <KOM.SanguophageTweaks.MessageCannotUseIncapableOfViolenceWouldKill>Cannot use {ABILITY_label} on anyone it would kill or seriously injure, as {PAWN_labelShort} is incapable of violence.</KOM.SanguophageTweaks.MessageCannotUseIncapableOfViolenceWouldKill>
 
+  <!-- Settings -->
   <KOM.SanguophageTweaks.Settings.Category>[KOM] Sanguophage Tweaks</KOM.SanguophageTweaks.Settings.Category>
+
   <KOM.SanguophageTweaks.Settings.EnableDebugMode.Label>Debug mode</KOM.SanguophageTweaks.Settings.EnableDebugMode.Label>
   <KOM.SanguophageTweaks.Settings.EnableDebugMode.Tooltip>Default: false.</KOM.SanguophageTweaks.Settings.EnableDebugMode.Tooltip>
+
   <KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Label>Skip having the victim's body size influence on the blood and hemogen the biter gains. Requires restart to take effect.</KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Label>
   <KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Tooltip>Not much of a difference without VRES or additional body size genes. Default: true.</KOM.SanguophageTweaks.Settings.EnableSkipVictimBodySizeEffectOnBiterGains.Tooltip>
+
+  <KOM.SanguophageTweaks.Settings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss.Label>Use this mod's formula for animal body size effect on animal bloodfeeder blood loss instead of VRE:S's. Requires restart to take effect.</KOM.SanguophageTweaks.Settings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss.Label>
+  <KOM.SanguophageTweaks.Settings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss.Tooltip>Only has an effect when VRE:S is loaded. Default: true.</KOM.SanguophageTweaks.Settings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss.Tooltip>
 </LanguageData>
