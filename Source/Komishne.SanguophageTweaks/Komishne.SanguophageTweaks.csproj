@@ -54,11 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefOf.cs" />
-    <Compile Include="HarmonyPatches.cs" />
-    <Compile Include="HarmonyPatches_Biotech.cs" />
+    <Compile Include="Harmony\HarmonyPatches.cs" />
+    <Compile Include="Harmony\HarmonyPatches_Biotech.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe_BloodTransfusionAnimal.cs" />
     <Compile Include="Recipe_ExtractHemogenAnimal.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanguophageTweaksMod.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>

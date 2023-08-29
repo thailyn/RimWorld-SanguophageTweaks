@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Reflection.Emit;
 using Verse;
 
-namespace Komishne.SanguophageTweaks
+namespace Komishne.SanguophageTweaks.Conditional.VRES
 {
     [HarmonyPatch(typeof(CompAbilityEffect_BloodfeederBite), nameof(CompAbilityEffect_BloodfeederBite.Valid))]
     static class CompAbilityEffect_BloodfeederBite_Valid_Patch
