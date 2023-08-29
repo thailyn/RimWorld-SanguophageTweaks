@@ -14,6 +14,13 @@ namespace Komishne.SanguophageTweaks.Conditional.VRES
     {
         public static float _baseBiteAmount = 0.6f;
 
+        static bool Prepare(/*MethodBase original*/)
+        {
+            // There is only one method being patched in this class, and only one feature being patched, so we do not
+            // need to check the MethodBase parameter.
+            return SanguophageTweaksSettings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss;
+        }
+
         // The base "amount" that BiteAmount is modifying is always the same: 0.6. This can be determined by computing
         // the value of BiteAmount for a pawn with a body size of 1. Instead of using BiteAmount's computed value, we
         // will ignore it and compute our own.
