@@ -3,7 +3,7 @@ using Verse;
 
 namespace Komishne.SanguophageTweaks
 {
-    class Utility
+    public class Utility
     {
         // Similar to how animal bloodfeeder bite ability reduces or increases the amount of blood loss if the body
         // size of the victim is large or small, reduce the bloodloss severity here based on body size.
