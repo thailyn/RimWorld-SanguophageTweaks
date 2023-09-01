@@ -78,7 +78,7 @@ Note that "hemogen" and "hemogen resource" are interchangable here, as opposed t
 
 ## Stat collection
 
-These values have been updated for version 0.2.0 of Sanguophage Tweaks.
+These values have been updated for version 0.3.0 of Sanguophage Tweaks.
 
 Blank entries in the table mean the related action is not possible with that column's mod combination, or the action has no effect on that stat.
 
@@ -162,11 +162,11 @@ The victim must have at least 10% hemogen to be fed on.
 |:------------------------------------------------------- | --- | ---- | --- | --------- |
 | Blood loss base amount                                  |     | 60%  |     | 60%       |
 | Blood loss multiplier - victim minimum size threshold   |     | 0.2  |     | 0.2       |
-| Blood loss multiplier - at victim minimum size          |     | 1.67 |     | 1.67      |
-| Blood loss amount - at victim minimum size              |     | 100% |     | 100%      |
+| Blood loss multiplier - at victim minimum size          |     | 1.67 |     | 5         |
+| Blood loss amount - at victim minimum size              |     | 100% |     | 300%      |
 | Blood loss multiplier - victim maximum size threshold   |     | 2    |     | 10        |
-| Blood loss multiplier - at victim maximum size          |     | 1/6  |     | 1/6       |
-| Blood loss amount - at victim maximum size              |     | 10%  |     | 10%       |
+| Blood loss multiplier - at victim maximum size          |     | 1/6  |     | 0.1       |
+| Blood loss amount - at victim maximum size              |     | 10%  |     | 6%        |
 | Hemogen loss base amount                                |     | 20%  |     | 20%       |
 | Hemogen gain base amount                                |     | 20%  |     | 20%       |
 | Hemogen loss affected by target body size               |     | Y    |     | Y         |
