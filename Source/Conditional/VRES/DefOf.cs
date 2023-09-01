@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace Komishne.SanguophageTweaks
+namespace Komishne.SanguophageTweaks.Conditional.VRES
 {
     [RimWorld.DefOf]
     public static class DefOf

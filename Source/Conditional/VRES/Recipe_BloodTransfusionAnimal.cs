@@ -4,12 +4,12 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 
-namespace Komishne.SanguophageTweaks
+namespace Komishne.SanguophageTweaks.Conditional.VRES
 {
     class Recipe_BloodTransfusionAnimal : Recipe_Surgery
     {
         public const float BloodlossHealedPerPack = 0.35f;
-        protected ThingDef hemogenPackIngredientThingDef = DefDatabase<ThingDef>.GetNamed("VRE_HemogenPack_Animal");
+        protected ThingDef hemogenPackIngredientThingDef = VanillaRacesExpandedSanguophage.InternalDefOf.VRE_HemogenPack_Animal;
 
         public ThingDef HemogenPackIngredientThingDef
         {

@@ -2,14 +2,14 @@
 using RimWorld;
 using Verse;
 
-namespace Komishne.SanguophageTweaks
+namespace Komishne.SanguophageTweaks.Conditional.VRES
 {
     public class Recipe_ExtractHemogenAnimal : Recipe_Surgery
     {
         protected const float BloodlossSeverityIndustrial = 0.45f;
         protected const float BloodlossSeverityHerbal = 0.65f;
 
-        protected ThingDef hemogenPackProducedThingDef = DefDatabase<ThingDef>.GetNamed("VRE_HemogenPack_Animal");
+        protected ThingDef hemogenPackProducedThingDef = VanillaRacesExpandedSanguophage.InternalDefOf.VRE_HemogenPack_Animal;
 
         public ThingDef HemogenPackProducedThingDef
         {
