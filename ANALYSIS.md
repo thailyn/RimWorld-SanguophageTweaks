@@ -14,7 +14,7 @@ The final section includes some "issues" I have identified during this process. 
 * (Fact) Hemogenic and non-hemogenic pawns gain the same amount of blood loss when receiving a blood transfusion.
 * (Fact) Most/all hemogenic pawns have a net loss of hemogen per day at a constant rate, irrespective of any conscious actions taken.
     * (Fact) The rate hemogen is lost can vary between pawns and depends on their genes.
-* (Fact) Pawns have a "hemogen gain factor", which modifies all hemogen offsets (gains and losses).
+* (Fact) Pawns have a "hemogen gain factor", which modifies all hemogen gains, but not losses.
     * This appears to be only affected by genes, but there are no such genes in Biotech itself.
 
 ### Non-assumptions
@@ -41,7 +41,7 @@ The final section includes some "issues" I have identified during this process. 
 Note that "hemogen" and "hemogen resource" are interchangable here, as opposed to the non-normalized "total hemogen".
 
 * Pawns with a larger body size have more total hemogen.
-* The hemogen resource for a pawn is a normalized value, so a single unit can represent a different amount of total hemogen for different pawns.
+* The hemogen resource for a pawn is a normalized value, so a single unit of hemogen resource can represent a different amount of total hemogen for different pawns.
 * Bloodfeeder victims lose a fraction of their blood and fraction of their hemogen per bite that is inversely proportional to their body size.
 * Bloodfeeder biters gain an amount of hemogen that is inversely proportional to their own body size.
 * The amount of hemogen a bloodfeeder biter gains does not depend on the victim's body size.
