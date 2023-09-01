@@ -64,7 +64,8 @@ namespace Komishne.SanguophageTweaks
             listingStandard.CheckboxLabeled(
                 "KOM.SanguophageTweaks.Settings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss.Label".Translate(),
                 ref SanguophageTweaksSettings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss,
-                "KOM.SanguophageTweaks.Settings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss.Tooltip".Translate());
+                "KOM.SanguophageTweaks.Settings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss.Tooltip".Translate(),
+                /*height=*/40f);
 
             listingStandard.CheckboxLabeled(
                 "KOM.SanguophageTweaks.Settings.EnableDebugMode.Label".Translate(),
