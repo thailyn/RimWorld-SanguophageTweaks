@@ -28,7 +28,6 @@ namespace Komishne.SanguophageTweaks.Conditional.VRES
         // Note that the BiteAmount function triggers constantly while mousing over a target with the ability active.
         static float Postfix(float __result, /*CompAbilityEffect_AnimalfeederBite __instance,*/ Pawn target)
         {
-            Log.Error($"[KOM.SanguophageTweaks.Conditional.VRES] Running Postfix patch for CompAbilityEffect_AnimalfeederBite.BiteAmount.");
             return _baseBiteAmount * Utility.BloodlossSeverityMultiplierFromBodySize(target);
         }
     }
