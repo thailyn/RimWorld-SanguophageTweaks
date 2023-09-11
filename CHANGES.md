@@ -7,7 +7,7 @@
 
 ### Bug fixes
 
-* Move all patches and code (including a compiled assembly) that requies VRES to a subdirectory that is only loaded when VRES is also present.
+* Move all patches and code (including a compiled assembly) that requires VRES to a subdirectory that is only loaded when VRES is also present.
   * Uses the LoadFolders.xml feature for this conditional loading.
 
 ## v0.2.0 - 2023.08.27
