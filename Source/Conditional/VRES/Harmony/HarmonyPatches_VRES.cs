@@ -10,7 +10,7 @@ using Verse;
 namespace Komishne.SanguophageTweaks.Conditional.VRES
 {
     [HarmonyPatch(typeof(CompAbilityEffect_AnimalfeederBite), "BiteAmount")]
-    static class CompAbilityEffect_BloodfeederBite_Valid_Patch
+    static class CompAbilityEffect_AnimalfeederBite_BiteAmount_Patch
     {
         public static float _baseBiteAmount = 0.6f;
 
