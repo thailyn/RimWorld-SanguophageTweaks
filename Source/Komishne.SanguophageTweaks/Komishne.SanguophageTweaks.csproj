@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefOf.cs" />
     <Compile Include="Harmony\HarmonyPatches.cs" />
     <Compile Include="Harmony\HarmonyPatches_Biotech.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
