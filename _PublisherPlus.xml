@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Excluded>
+    <exclude>.git</exclude>
+    <exclude>.vs</exclude>
+    <exclude>1.4\Assemblies\Komishne.SanguophageTweaks.pdb</exclude>
+    <exclude>1.4\Conditional\VRES\Assemblies\Komishne.SanguophageTweaks.Conditional.VRES.pdb</exclude>
+    <exclude>Source\.vs</exclude>
+    <exclude>Source\Conditional\VRES\bin</exclude>
+    <exclude>Source\Conditional\VRES\obj</exclude>
+    <exclude>Source\Komishne.SanguophageTweaks\bin</exclude>
+    <exclude>Source\Komishne.SanguophageTweaks\obj</exclude>
+  </Excluded>
+</Configuration>
