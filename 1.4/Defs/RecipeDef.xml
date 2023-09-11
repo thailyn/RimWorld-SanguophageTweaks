@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>KOM_DEBUG_SurgeryOnPartWithDeathFailure</defName>
+    <label>DEBUG - Test death on failed effect by excising necrosis</label>
+    <description>"Perform" "surgery" to remove necrosis.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <!-- <workerClass>Recipe_Surgery</workerClass> -->
+    <!-- <workerClass>Recipe_RemoveHediff</workerClass> -->
+    <jobString>"Performing" "surgery" to remove necrosis.</jobString>
+    <!-- <hideBodyPartNames>true</hideBodyPartNames> -->
+    <!-- <targetsBodyPart>false</targetsBodyPart> -->
+    <workAmount>50</workAmount>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <removesHediff>Necrosis</removesHediff>
+    <!-- <removesHediff>Necrosis</removesHediff> -->
+    <successfullyRemovedHediffMessage>{0} has beaten the odds and successfully toyed with {1}'s life.</successfullyRemovedHediffMessage>
+    <surgerySuccessChanceFactor>0.01</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.9</deathOnFailedSurgeryChance>
+    <!-- <surgerySuccessChanceFactor>0.7</surgerySuccessChanceFactor> -->
+    <!-- <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance> -->
+    <skillRequirements>
+      <Medicine>1</Medicine>
+    </skillRequirements>
+    <!--
+    <ingredients>
+      <li>
+	<filter>
+	  <categories>
+	    <li>Medicine</li>
+	  </categories>
+	</filter>
+	<count>6</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+	<li>Medicine</li>
+      </categories>
+      <disallowedThingDefs>
+	<li>MedicineHerbal</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+    -->
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>KOM_DEBUG_SurgeryNoPartWithDeathFailure</defName>
+    <label>DEBUG - Test death on failed effect by excising necrosis (no part)</label>
+    <description>"Perform" "surgery" to remove necrosis.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <!-- <workerClass>Recipe_Surgery</workerClass> -->
+    <!-- <workerClass>Recipe_RemoveHediff</workerClass> -->
+    <jobString>"Performing" "surgery" to remove necrosis.</jobString>
+
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+
+    <workAmount>50</workAmount>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <removesHediff>Necrosis</removesHediff>
+    <!-- <removesHediff>Necrosis</removesHediff> -->
+    <successfullyRemovedHediffMessage>{0} has beaten the odds and successfully toyed with {1}'s life.</successfullyRemovedHediffMessage>
+    <surgerySuccessChanceFactor>0.01</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.9</deathOnFailedSurgeryChance>
+    <!-- <surgerySuccessChanceFactor>0.7</surgerySuccessChanceFactor> -->
+    <!-- <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance> -->
+    <skillRequirements>
+      <Medicine>1</Medicine>
+    </skillRequirements>
+    <!--
+    <ingredients>
+      <li>
+	<filter>
+	  <categories>
+	    <li>Medicine</li>
+	  </categories>
+	</filter>
+	<count>6</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+	<li>Medicine</li>
+      </categories>
+      <disallowedThingDefs>
+	<li>MedicineHerbal</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+    -->
+  </RecipeDef>
+</Defs>
