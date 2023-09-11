@@ -48,5 +48,22 @@ namespace Komishne.SanguophageTweaks
                 pawn.health.AddHediff(newBloodLossHediff);
             }
         }
+
+        public static void ApplySurgeryOnDeathHediff(Pawn surgeon, Pawn patient, RecipeDef recipe, BodyPartRecord bodyPart)
+        {
+            if (patient is null)
+            {
+                Log.Error(
+                    $"[KOM.SanguophageTweaks] In ApplySurgeryOnDeathHediff, but patient is null. " +
+                    $"Parameters: surgeon: {surgeon?.ToString() ?? "<null>"}, " +
+                    $"patient: {patient?.ToString() ?? "<null>"}, " +
+                    $"recipe: {recipe?.ToString() ?? "<null>"}, " +
+                    $"bodyPart: {bodyPart?.ToString() ?? "<null>"}.");
+                return;
+            }
+
+            Hediff mishapHediff = HediffMaker.MakeHediff(DefOf.KOM_FatalSurgeryMishap, patient, bodyPart);
+            patient.health.AddHediff(mishapHediff);
+        }
     }
 }
