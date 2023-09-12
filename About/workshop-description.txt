@@ -1,3 +1,5 @@
+[h1]Sanguophage Tweaks - v0.4.0[/h1]
+
 [h2]About[/h2]
 This mod makes a number of small[ish] tweaks to how Sanguophages behave, and it also includes a few bits of new content.  Since it deals with Sanguophages, the Biotech DLC is a hard requirement. Any other mods that this mod patches to or adds content for are all optional; the features are only enabled when the dependent mods are present.
 
@@ -8,7 +10,13 @@ There were two main concerns I had that led to the creation of this mod. First, 
 For a more comprehensive dissection of the thought process that led me to these changes, see the ANALYSIS.md file included with the downloaded files and is in the GitHub repo. Please also see the included README.md file for a slightly less brief version of this document.
 
 [h2]Features[/h2]
-The mod features are categorized by the mod they primarily modify or affect.
+The mod features are categorized by the mod they primarily modify or affect. See the included README.md file for more details.
+
+[h3]Core[/h3]
+
+[list]
+    [*]Surgeries that have a chance to immediately kill the pawn on failure now instead apply a "fatal surgery mishap" hediff, allowing deathless pawns the opportunity to enter deathrest or a regenerative coma.
+[/list]
 
 [h3]Biotech[/h3]
 [list]

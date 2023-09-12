@@ -1,5 +1,7 @@
 # Sanguophage Tweaks
 
+Latest version: v0.4.0
+
 ## About
 
 This mod makes a number of small[ish] tweaks to how Sanguophages behave, and
@@ -28,6 +30,18 @@ is in the GitHub repo.
 ## Features
 
 The mod features are categorized by the mod they primarily modify or affect.
+
+### Core
+
+- Surgeries that have a chance to immediately kill the pawn on failure now
+  instead apply a "fatal surgery mishap" hediff.
+  - This hediff still immediately kills the pawn all the same. However,
+    deathless pawns are able to enter deathrest or a regenerative coma, instead
+    of bypassing those and dying outright.
+  - If the pawn does not immediately die, the affected body part (if any) is
+    destroyed, which can still cause a deathless pawn to die, anyway.
+  - The hediff disappears after a couple in-game hours, so it itself will not
+    prevent a pawn from finishing their deathrest/regenerative coma.
 
 ### Biotech
 
