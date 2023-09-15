@@ -70,6 +70,7 @@ Note that "hemogen" and "hemogen resource" are interchangable here, as opposed t
 * Should bleeding cause hemogen loss?
     * If hemogen is mixed in with the blood, then if a hemogenic pawn loses blood, they should also lose an amount of hemogen, proportional to the bleed rate and their hemogen concentration.
     * Bleed rate and hemogen loss rate from bleeding would then usually not be the same, but would converge as bleeding continues (not counting other influences to blood loss and hemogen level).
+    * As of version 0.5.0, hemogenic pawns now *do* lose hemogen while bleeding.
 * HemogenGainFactor stat is not being used.
     * It might be perfect to include body size as a factor of HemogenGainFactor. It is already incorporated into the HemogenOffset method, so a patch is not necessary.
         * Actually, it is only included for hemogen *gains*, not losses.
@@ -78,7 +79,7 @@ Note that "hemogen" and "hemogen resource" are interchangable here, as opposed t
 
 ## Stat collection
 
-These values have been updated for version 0.3.0 of Sanguophage Tweaks.
+These values have been updated for version 0.5.0 of Sanguophage Tweaks.
 
 Blank entries in the table mean the related action is not possible with that column's mod combination, or the action has no effect on that stat.
 

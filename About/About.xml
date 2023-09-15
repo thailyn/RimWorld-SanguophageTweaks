@@ -6,7 +6,7 @@
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
-  <modVersion>0.4.0</modVersion>
+  <modVersion>0.5.0</modVersion>
   <url>https://github.com/thailyn/RimWorld-SanguophageTweaks</url>
   <description>Tweak some aspects of Sanguophages, both from Biotech and from some mods. For example, more comprehensive and standardized modifiers to hemogen and blood loss based on the body size of the biter and the victim. See the README.md file for more details.</description>
   <modDependencies>

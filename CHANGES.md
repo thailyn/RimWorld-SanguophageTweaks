@@ -1,3 +1,15 @@
+## v0.5.0 - 2023.09.15
+
+### New features
+
+* Introduced new stats related to hemogen:
+  * Hemogen concentration
+    * A measure of how much hemogen is in a pawn's blood, based on their current hemogen value and how much blood they have lost.
+  * Hemogen bleed rate
+    * A measure of how quickly a pawn is losing hemogen due to bleeding, based on bleed rate and hemogen concentration.
+* A bleeding hemogenic pawn now also loses hemogen.
+  * This can be disabled in the mod settings.
+
 ## v0.4.0 - 2023.09.11
 
 ### New features

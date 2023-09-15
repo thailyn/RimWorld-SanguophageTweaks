@@ -1,6 +1,6 @@
 # Sanguophage Tweaks
 
-Latest version: v0.4.0
+Latest version: v0.5.0
 
 ## About
 
@@ -72,6 +72,25 @@ The mod features are categorized by the mod they primarily modify or affect.
     feature).
   - This also only applies to "normal" bloodfeeding, not for feeding on
     animals or sanguophages (or corpses, but, well...).
+- Add a concept of "hemogen concentration".
+  - This is a measure of the amount of hemogen a pawn has, compared to the
+    amount of blood they have. If a pawn has lost a lot of hemogen, but only a
+    little (or no) blood, their hemogen concentration will be very low, and
+    vice versa.
+  - Since a hemogen pawn constantly loses hemogen from their genes, a pawn's
+    hemogen concentration will continuously (albeit slowly) decrease.
+- A hemogenic pawn that is bleeding will now also lose hemogen.
+  - The rate at which hemogen is lost is based on the pawn's "hemogen bleed
+    rate" stat, which is based on their bleed rate and hemogen concentration.
+  - As a pawn bleeds (and assuming no other influences), their hemogen
+    concentration will gradually move towards 1.
+  - This negative feedback loop is designed so when a hemogenic pawn bleeds
+    out, their hemgen value should reach 0 at the same time.
+    - Note that a hemogenic pawn's hemogen value is set to zero when they start
+      deathresting, anyway.
+    - Also note that the exact value will be a little off, due to the pawn's
+      natural hemogen drain, which is a constant rate.
+  - This feature can be disabled in the mod settings.
 
 ### Vanilla Races Expanded - Sanguophage
 - Add a recipe to perform a blood transfusion to animals using animal hemogen.
