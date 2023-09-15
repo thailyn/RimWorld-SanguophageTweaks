@@ -137,6 +137,13 @@ namespace Komishne.SanguophageTweaks
     [HarmonyPatch(typeof(HediffGiver_Bleeding), nameof(HediffGiver_Bleeding.OnIntervalPassed))]
     static class HediffGiver_Bleeding__OnIntervalPassed__Patch
     {
+        static bool Prepare(/*MethodBase original*/)
+        {
+            // There is only one method being patched in this class, and only one feature being patched, so we do not
+            // need to check the MethodBase parameter.
+            return SanguophageTweaksSettings.EnableHemogenBleeding;
+        }
+
         // __state captures the amount of blood loss the pawn had before the bleeding for the interval is applied.
         static void Prefix(Pawn pawn, out float __state)
         {
