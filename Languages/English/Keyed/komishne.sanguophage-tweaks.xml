@@ -10,6 +10,9 @@
   <!-- Settings -->
   <KOM.SanguophageTweaks.Settings.Category>[KOM] Sanguophage Tweaks</KOM.SanguophageTweaks.Settings.Category>
 
+  <KOM.SanguophageTweaks.Settings.EnableHemogenBleeding.Label>Enable hemogen loss from bleeding.</KOM.SanguophageTweaks.Settings.EnableHemogenBleeding.Label>
+  <KOM.SanguophageTweaks.Settings.EnableHemogenBleeding.Tooltip>A hemogenic pawn will lose hemogen at a rate proportional to their total bleed rate and hemogen concentration. Requires restart to change. Default: true.</KOM.SanguophageTweaks.Settings.EnableHemogenBleeding.Tooltip>
+
   <KOM.SanguophageTweaks.Settings.EnableDebugMode.Label>Debug mode</KOM.SanguophageTweaks.Settings.EnableDebugMode.Label>
   <KOM.SanguophageTweaks.Settings.EnableDebugMode.Tooltip>Default: false.</KOM.SanguophageTweaks.Settings.EnableDebugMode.Tooltip>
 

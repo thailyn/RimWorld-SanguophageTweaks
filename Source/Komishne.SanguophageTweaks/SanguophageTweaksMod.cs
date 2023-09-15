@@ -18,6 +18,9 @@ namespace Komishne.SanguophageTweaks
         public static bool UseThisModsFormulaForAnimalBloodfeedingBloodLoss =
             UseThisModsFormulaForAnimalBloodfeedingBloodLossDefault;
 
+        protected static bool EnableHemogenBleedingDefault = true;
+        public static bool EnableHemogenBleeding = EnableHemogenBleedingDefault;
+
         protected static bool EnableDebugModeDefault = false;
         public static bool EnableDebugMode = EnableDebugModeDefault;
 
@@ -28,11 +31,19 @@ namespace Komishne.SanguophageTweaks
                 /*label=*/"enableSkipVictimBodySizeEffectOnBiterGains",
                 /*defaultValue=*/EnableSkipVictimBodySizeEffectOnBiterGainsDefault,
                 /*forceSave=*/true);
+
             Scribe_Values.Look(
                 ref UseThisModsFormulaForAnimalBloodfeedingBloodLoss,
                 /*label=*/"useThisModsFormulaForAnimalBloodfeedingBloodLoss",
                 /*defaultValue=*/UseThisModsFormulaForAnimalBloodfeedingBloodLossDefault,
                 /*forceSave=*/true);
+
+            Scribe_Values.Look(
+                ref EnableHemogenBleeding,
+                /*label=*/"enableHemogenBleeding",
+                /*defaultValue=*/EnableHemogenBleedingDefault,
+                /*forceSave=*/true);
+
             Scribe_Values.Look(
                 ref EnableDebugMode,
                 /*label=*/"enableDebugMode",
@@ -66,6 +77,11 @@ namespace Komishne.SanguophageTweaks
                 ref SanguophageTweaksSettings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss,
                 "KOM.SanguophageTweaks.Settings.UseThisModsFormulaForAnimalBloodfeedingBloodLoss.Tooltip".Translate(),
                 /*height=*/40f);
+
+            listingStandard.CheckboxLabeled(
+                "KOM.SanguophageTweaks.Settings.EnableHemogenBleeding.Label".Translate(),
+                ref SanguophageTweaksSettings.EnableHemogenBleeding,
+                "KOM.SanguophageTweaks.Settings.EnableHemogenBleeding.Tooltip".Translate());
 
             listingStandard.CheckboxLabeled(
                 "KOM.SanguophageTweaks.Settings.EnableDebugMode.Label".Translate(),
