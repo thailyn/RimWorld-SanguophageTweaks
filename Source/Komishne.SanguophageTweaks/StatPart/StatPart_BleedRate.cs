@@ -16,8 +16,8 @@ namespace Komishne.SanguophageTweaks
         public override string ExplanationPart(StatRequest req)
         {
             return TryGetBleedRate(req, out float bleedRate) ?
-                (string)("KOM.SanguophageTweaks.StatsReport_BleedRate".Translate() + ": x" +
-                bleedRate.ToString("P2")) : null;
+                $"{"KOM.SanguophageTweaks.StatsReport_BleedRate".Translate()}: x{bleedRate:P2}\n" :
+                null;
         }
 
         private bool TryGetBleedRate(StatRequest req, out float bleedRate)
