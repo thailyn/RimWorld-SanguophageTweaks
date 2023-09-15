@@ -133,4 +133,57 @@ namespace Komishne.SanguophageTweaks
             }
         }
     }
+
+    [HarmonyPatch(typeof(HediffGiver_Bleeding), nameof(HediffGiver_Bleeding.OnIntervalPassed))]
+    static class HediffGiver_Bleeding__OnIntervalPassed__Patch
+    {
+        // __state captures the amount of blood loss the pawn had before the bleeding for the interval is applied.
+        static void Prefix(Pawn pawn, out float __state)
+        {
+            Hediff bloodLossHediff = pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
+            __state = bloodLossHediff is null ? 0f : bloodLossHediff.Severity;
+        }
+
+        static void Postfix(Pawn pawn, float __state)
+        {
+            Hediff bloodLossHediff = pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
+            float bloodLossAfter = bloodLossHediff is null ? 0f : bloodLossHediff.Severity;
+
+            float bloodLossChange = bloodLossAfter - __state;
+            // The blood loss hediff measures something that has been lost, so a positive change means more blood has
+            // been lost.
+            if (bloodLossChange <= 0f)
+            {
+                // TODO: Restore hemogen at a rate proportional to blood gain from natural recovery (but at a much
+                // slower rate)?
+
+                // Log.Warning(
+                //     $"[KOM.SanguophageTweaks] Skipping adjusthing hemogen level based on bleeding: non-positive " +
+                //     $"blood loss change of {bloodLossChange}.");
+                return;
+            }
+
+            Gene_Hemogen hemogenGene = pawn.genes?.GetGene(GeneDefOf.Hemogenic) as Gene_Hemogen;
+            if (hemogenGene is null)
+            {
+                // Log.Warning(
+                //     $"[KOM.SanguophageTweaks] Skipping adjusthing hemogen level based on bleeding: pawn " +
+                //     $"{pawn?.Label ?? "<null pawn or pawn label>"} is non-hemogenic.");
+                return;
+            }
+
+            float hemogenValueBefore = hemogenGene.Value;
+            float hemogenChange = bloodLossChange * pawn.GetStatValue(KOM_StatDefOf.KOM_HemogenConcentration);
+            hemogenGene.Value -= hemogenChange;
+
+            if (SanguophageTweaksSettings.EnableDebugMode)
+            {
+                Log.Warning(
+                    $"[KOM.SanguophageTweaks] Adjusting hemogen level for pawn " +
+                    $"{pawn?.Label ?? "<null pawn or pawn label>"} based on bleeding. Blood loss change: " +
+                    $"{bloodLossChange}; hemogen change: {hemogenChange}; hemogen value before: " +
+                    $"{hemogenValueBefore}; hemogen value after: {hemogenGene.Value}.");
+            }
+        }
+    }
 }
