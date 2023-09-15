@@ -3,6 +3,10 @@
 <LanguageData>
   <KOM.SanguophageTweaks.MessageCannotUseIncapableOfViolenceWouldKill>Cannot use {ABILITY_label} on anyone it would kill or seriously injure, as {PAWN_labelShort} is incapable of violence.</KOM.SanguophageTweaks.MessageCannotUseIncapableOfViolenceWouldKill>
 
+  <!-- StatDefs -->
+  <KOM.SanguophageTweaks.StatsReport_BleedRate>Bleed rate</KOM.SanguophageTweaks.StatsReport_BleedRate>
+  <KOM.SanguophageTweaks.StatsReport_HemogenConcentration>Hemogen concentration</KOM.SanguophageTweaks.StatsReport_HemogenConcentration>
+
   <!-- Settings -->
   <KOM.SanguophageTweaks.Settings.Category>[KOM] Sanguophage Tweaks</KOM.SanguophageTweaks.Settings.Category>
 

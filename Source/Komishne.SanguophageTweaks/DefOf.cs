@@ -8,4 +8,11 @@ namespace Komishne.SanguophageTweaks
     {
         public static HediffDef KOM_FatalSurgeryMishap;
     }
+
+    [RimWorld.DefOf]
+    public static class KOM_StatDefOf
+    {
+        public static StatDef KOM_HemogenBleedRate;
+        public static StatDef KOM_HemogenConcentration;
+    }
 }
