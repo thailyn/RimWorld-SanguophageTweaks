@@ -13,7 +13,6 @@ For a more comprehensive dissection of the thought process that led me to these 
 The mod features are categorized by the mod they primarily modify or affect. See the included README.md file for more details.
 
 [h3]Core[/h3]
-
 [list]
     [*]Surgeries that have a chance to immediately kill the pawn on failure now instead apply a "fatal surgery mishap" hediff, allowing deathless pawns the opportunity to enter deathrest or a regenerative coma.
 [/list]
