@@ -62,7 +62,7 @@ namespace Komishne.SanguophageTweaks
                 return;
             }
 
-            Hediff mishapHediff = HediffMaker.MakeHediff(DefOf.KOM_FatalSurgeryMishap, patient, bodyPart);
+            Hediff mishapHediff = HediffMaker.MakeHediff(KOM_DefOf.KOM_FatalSurgeryMishap, patient, bodyPart);
             patient.health.AddHediff(mishapHediff);
         }
     }
