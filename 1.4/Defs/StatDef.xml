@@ -40,6 +40,8 @@
     <statFactors>
       <li>KOM_HemogenConcentration</li>
     </statFactors>
+    <!-- TODO: Add a StatPart or some other mechanism to set the value to 0
+         when the hemogen bleeding setting is disabled. -->
     <parts>
       <li Class="Komishne.SanguophageTweaks.StatPart_BleedRate" />
     </parts>
